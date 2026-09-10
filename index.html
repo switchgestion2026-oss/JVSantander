@@ -7,6 +7,15 @@
   <meta name="theme-color" content="#f3f1eb">
   <title>Estudio Jurídico JVS — Jesica Vanesa Santander</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-617G837R3H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-617G837R3H');
+  </script>
+
   <style>
     :root {
       --paper: #f3f1eb;
@@ -918,6 +927,17 @@
       gap: 15px;
     }
 
+    .contact-map {
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .contact-map iframe {
+      display: block;
+      filter: grayscale(1) contrast(1.05);
+    }
+
     .contact-detail {
       display: grid;
       grid-template-columns: 24px 1fr;
@@ -942,6 +962,10 @@
 
     .contact-detail span {
       color: #626a6f;
+    }
+
+    .contact-detail strong a:hover {
+      border-bottom: 1px solid var(--ink);
     }
 
     .contact-form {
@@ -1116,48 +1140,28 @@
     .footer-credit a:hover { color: var(--ink); }
 
     /* ---------- Floating WhatsApp ---------- */
-    .whatsapp-float {
+    .wa-float {
       position: fixed;
-      z-index: 80;
       right: 24px;
       bottom: 24px;
-      width: 57px;
-      height: 57px;
+      z-index: 150;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
-      display: grid;
-      place-items: center;
       background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(17,23,28,.35);
+      transition: transform .3s ease;
+    }
+
+    .wa-float:hover { transform: translateY(-3px); }
+
+    .wa-float svg {
+      width: 26px;
+      height: 26px;
       color: var(--white);
-      box-shadow: 0 10px 30px rgba(0,0,0,.20);
-      transition: width .3s ease, border-radius .3s ease, transform .3s ease;
-    }
-
-    .whatsapp-float:hover {
-      width: 172px;
-      border-radius: 30px;
-      transform: translateY(-3px);
-    }
-
-    .whatsapp-float span {
-      max-width: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 10px;
-      opacity: 0;
-      transition: max-width .3s ease, opacity .2s ease;
-    }
-
-    .whatsapp-float:hover span {
-      max-width: 110px;
-      opacity: 1;
-    }
-
-    .whatsapp-float svg {
-      width: 27px;
-      height: 27px;
-      fill: currentColor;
-      stroke: none;
-      flex: 0 0 27px;
     }
 
     /* ---------- Mobile menu ---------- */
@@ -1506,19 +1510,12 @@
         flex-wrap: wrap;
       }
 
-      .whatsapp-float {
+      .wa-float {
         right: 16px;
         bottom: 16px;
-        width: 55px;
-        height: 55px;
+        width: 52px;
+        height: 52px;
       }
-
-      .whatsapp-float:hover {
-        width: 55px;
-        border-radius: 50%;
-      }
-
-      .whatsapp-float span { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1805,10 +1802,10 @@
               <p class="eyebrow">Estudio JVS</p>
               <h2>Soy Jesica Vanesa <span class="serif-italic">Santander.</span></h2>
               <p>
-                Abogada, especializada en brindar asesoramiento y representación legal en situaciones que requieren compromiso, estrategia y un trato cercano.
+                Abogada especializada en Derecho Penal, con años de trayectoria también en Sucesiones, Laboral y Familia. Combino conocimiento técnico con estrategia y un trato cercano en cada caso.
               </p>
               <p>
-                Creo en una forma de ejercer la abogacía que combina experiencia, claridad y atención personalizada, para que cada cliente se sienta acompañado y bien orientado.
+                Como mamá, entiendo lo que significa atravesar un problema y necesitar respuestas claras, no solo términos legales — por eso cada cliente recibe acompañamiento real, de principio a fin.
               </p>
             </div>
 
@@ -1877,8 +1874,15 @@
               </div>
               <div class="contact-detail">
                 <svg><use href="#icon-pin"></use></svg>
-                <div><strong>Buenos Aires — Vicente López</strong><span>Atención presencial y virtual</span></div>
+                <div>
+                  <strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Armenia+2606,+Munro,+Vicente+L%C3%B3pez" target="_blank" rel="noopener">Armenia 2606, Munro — Vicente López</a></strong>
+                  <span>Atención presencial y virtual</span>
+                </div>
               </div>
+            </div>
+
+            <div class="contact-map reveal reveal-delay-1">
+              <iframe src="https://www.google.com/maps?q=Armenia+2606,+Munro,+Vicente+L%C3%B3pez,+Buenos+Aires&amp;output=embed" width="100%" height="220" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación del estudio en Google Maps"></iframe>
             </div>
           </div>
 
@@ -1955,9 +1959,8 @@
     </footer>
 
     <!-- WHATSAPP FLOTANTE -->
-    <a class="whatsapp-float js-whatsapp" href="#" aria-label="Solicitar consulta por WhatsApp">
-      <svg><use href="#icon-whatsapp" class="wa-fill"></use></svg>
-      <span>Solicitar consulta</span>
+    <a class="wa-float" href="https://wa.me/541123096920?text=Hola%2C%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" onclick="window.gtag &amp;&amp; gtag('event','click_whatsapp',{area:'general'})">
+      <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-whatsapp"></use></svg>
     </a>
 
   </div>
