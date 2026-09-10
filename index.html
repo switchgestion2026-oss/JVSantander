@@ -214,9 +214,9 @@
     }
 
     .brand img {
-      width: 82px;
+      width: 112px;
       height: auto;
-      flex: 0 0 82px;
+      flex: 0 0 112px;
     }
 
     .brand-text {
@@ -233,8 +233,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 23px;
-      font-size: 10px;
+      gap: 22px;
+      font-size: 13px;
       white-space: nowrap;
     }
 
@@ -296,6 +296,19 @@
       width: 16px;
       height: 16px;
       flex: 0 0 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.4;
+    }
+
+    .urgent .button {
+      color: var(--white);
+      border-color: var(--white);
+    }
+
+    .urgent .button:hover {
+      background: var(--white);
+      color: var(--dark);
     }
 
     .menu-toggle {
@@ -409,6 +422,15 @@
       position: relative;
       min-height: 570px;
       overflow: hidden;
+    }
+
+    .hero-media::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to right, var(--paper) 0%, rgba(243,241,235,.35) 12%, transparent 30%);
+      pointer-events: none;
     }
 
     .hero-media img {
@@ -1017,9 +1039,9 @@
     }
 
     .footer-brand img {
-      width: 72px;
+      width: 96px;
       height: auto;
-      flex: 0 0 72px;
+      flex: 0 0 96px;
     }
 
     .footer-brand span {
@@ -1133,12 +1155,12 @@
     }
 
     .whatsapp-float svg {
-      width: 21px;
-      height: 21px;
+      width: 28px;
+      height: 28px;
       fill: none;
       stroke: currentColor;
       stroke-width: 1.4;
-      flex: 0 0 21px;
+      flex: 0 0 28px;
     }
 
     /* ---------- Mobile menu ---------- */
@@ -1601,7 +1623,6 @@
           <a href="#especialidades">¿Qué necesitás resolver?</a>
           <a href="#especialidades">Especialidades</a>
           <a href="#como-trabajamos">Cómo trabajamos</a>
-          <a href="#articulos">Artículos</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
@@ -1624,7 +1645,6 @@
         <a href="#especialidades">Especialidades</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#como-trabajamos">Cómo trabajamos</a>
-        <a href="#articulos">Artículos</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -1677,7 +1697,7 @@
           <div class="hero-media reveal reveal-delay-2">
             <img src="./hero-estudio-juridico.webp" alt="Espacio de trabajo de un estudio jurídico" fetchpriority="high" width="1000" height="700">
             <div class="hero-cross" aria-hidden="true"></div>
-            <div class="hero-note">Más que ley,<br>personas.</div>
+            <div class="hero-note">Tu caso merece<br>una mirada integral.</div>
             <div class="hero-side-label">Estrategia · experiencia · resultados</div>
           </div>
         </div>
@@ -1705,7 +1725,7 @@
               <div class="specialty-media"><img src="./especialidad-penal.webp" alt="Derecho Penal" loading="lazy" width="500" height="500"></div>
               <h3>Penal</h3>
               <p>Detenciones, denuncias, causas, audiencias. Asistencia 24 hs.</p>
-              <a class="circle-arrow js-whatsapp" href="#" aria-label="Consultar por Derecho Penal"><svg><use href="#icon-arrow"></use></svg></a>
+              <a class="circle-arrow js-whatsapp" href="#" data-wa-msg="Hola, quisiera hacer una consulta por Derecho Penal." aria-label="Consultar por Derecho Penal"><svg><use href="#icon-arrow"></use></svg></a>
             </article>
 
             <article class="specialty reveal reveal-delay-1">
@@ -1713,7 +1733,7 @@
               <div class="specialty-media"><img src="./especialidad-laboral.webp" alt="Derecho Laboral" loading="lazy" width="500" height="500"></div>
               <h3>Laboral</h3>
               <p>Despidos, indemnizaciones, conflictos laborales.</p>
-              <a class="circle-arrow" href="#contacto" aria-label="Consultar por Derecho Laboral"><svg><use href="#icon-arrow"></use></svg></a>
+              <a class="circle-arrow js-whatsapp" href="#" data-wa-msg="Hola, quisiera hacer una consulta por Derecho Laboral." aria-label="Consultar por Derecho Laboral"><svg><use href="#icon-arrow"></use></svg></a>
             </article>
 
             <article class="specialty reveal reveal-delay-2">
@@ -1721,7 +1741,7 @@
               <div class="specialty-media"><img src="./especialidad-sucesiones.webp" alt="Sucesiones" loading="lazy" width="500" height="500"></div>
               <h3>Sucesiones</h3>
               <p>Inicio, trámite y seguimiento de expedientes.</p>
-              <a class="circle-arrow" href="#contacto" aria-label="Consultar por Sucesiones"><svg><use href="#icon-arrow"></use></svg></a>
+              <a class="circle-arrow js-whatsapp" href="#" data-wa-msg="Hola, quisiera hacer una consulta por Sucesiones." aria-label="Consultar por Sucesiones"><svg><use href="#icon-arrow"></use></svg></a>
             </article>
 
             <article class="specialty reveal reveal-delay-3">
@@ -1729,7 +1749,7 @@
               <div class="specialty-media"><img src="./especialidad-familia.webp" alt="Derecho de Familia" loading="lazy" width="500" height="500"></div>
               <h3>Familia</h3>
               <p>Divorcios, alimentos, régimen de comunicación.</p>
-              <a class="circle-arrow" href="#contacto" aria-label="Consultar por Derecho de Familia"><svg><use href="#icon-arrow"></use></svg></a>
+              <a class="circle-arrow js-whatsapp" href="#" data-wa-msg="Hola, quisiera hacer una consulta por Derecho de Familia." aria-label="Consultar por Derecho de Familia"><svg><use href="#icon-arrow"></use></svg></a>
             </article>
 
             <article class="specialty reveal">
@@ -1737,7 +1757,7 @@
               <div class="specialty-media"><img src="./especialidad-civil.webp" alt="Derecho Civil" loading="lazy" width="500" height="500"></div>
               <h3>Civil</h3>
               <p>Contratos, daños y perjuicios, reclamos.</p>
-              <a class="circle-arrow" href="#contacto" aria-label="Consultar por Derecho Civil"><svg><use href="#icon-arrow"></use></svg></a>
+              <a class="circle-arrow js-whatsapp" href="#" data-wa-msg="Hola, quisiera hacer una consulta por Derecho Civil." aria-label="Consultar por Derecho Civil"><svg><use href="#icon-arrow"></use></svg></a>
             </article>
 
             <article class="specialty reveal reveal-delay-1">
@@ -1745,7 +1765,7 @@
               <div class="specialty-media"><img src="./especialidad-amparos.webp" alt="Amparos" loading="lazy" width="500" height="500"></div>
               <h3>Amparos</h3>
               <p>Derechos, salud, educación y otras garantías.</p>
-              <a class="circle-arrow" href="#contacto" aria-label="Consultar por Amparos"><svg><use href="#icon-arrow"></use></svg></a>
+              <a class="circle-arrow js-whatsapp" href="#" data-wa-msg="Hola, quisiera hacer una consulta por un Amparo." aria-label="Consultar por Amparos"><svg><use href="#icon-arrow"></use></svg></a>
             </article>
           </div>
         </div>
@@ -1790,10 +1810,6 @@
               <p>
                 Creo en una forma de ejercer la abogacía que combina experiencia, claridad y atención personalizada, para que cada cliente se sienta acompañado y bien orientado.
               </p>
-              <a class="button" href="#contacto">
-                Conocer más sobre mí
-                <svg class="button-icon"><use href="#icon-arrow"></use></svg>
-              </a>
             </div>
 
             <div class="quote reveal reveal-delay-2">
@@ -1843,67 +1859,6 @@
         </div>
       </section>
 
-      <!-- ARTICULOS -->
-      <section class="section articles" id="articulos">
-        <div class="container article-grid">
-          <div class="reveal">
-            <p class="eyebrow">Información que te acompaña</p>
-            <h2>Artículos de<br>interés jurídico.</h2>
-            <p class="section-intro">
-              Novedades, consejos y respuestas a preguntas frecuentes, en un lenguaje claro.
-            </p>
-            <br>
-            <a class="text-link" href="#contacto">Ver todos los artículos <svg width="15" height="15"><use href="#icon-arrow"></use></svg></a>
-          </div>
-
-          <div class="article-cards">
-            <article class="article-card reveal">
-              <div class="article-visual">
-                <!-- SVG editorial: laboral -->
-                <svg viewBox="0 0 100 100" aria-hidden="true">
-                  <path d="M20 75h60M27 75V42h46v33M35 42V30h30v12M40 30v-8h20v8"/>
-                  <path d="M35 53h30M35 62h22"/>
-                  <path d="M66 18c7 5 11 12 12 21"/>
-                </svg>
-              </div>
-              <div class="article-date">12 SEP 2024</div>
-              <h3>¿Qué hacer ante un despido injustificado?</h3>
-              <a class="article-read" href="#contacto">Leer más →</a>
-            </article>
-
-            <article class="article-card reveal reveal-delay-1">
-              <div class="article-visual">
-                <!-- SVG editorial: sucesiones -->
-                <svg viewBox="0 0 100 100" aria-hidden="true">
-                  <path d="M22 74h56M28 67h44M33 60h34M38 53h24"/>
-                  <path d="M28 67 22 74M72 67l6 7M33 60l-5 7M67 60l5 7"/>
-                  <path d="M50 53V24M42 24h16M44 31h12"/>
-                </svg>
-              </div>
-              <div class="article-date">03 SEP 2024</div>
-              <h3>Sucesiones: primeras preguntas, respuestas claras</h3>
-              <a class="article-read" href="#contacto">Leer más →</a>
-            </article>
-
-            <article class="article-card reveal reveal-delay-2">
-              <div class="article-visual">
-                <!-- SVG editorial: amparo -->
-                <svg viewBox="0 0 100 100" aria-hidden="true">
-                  <path d="M25 78h50M31 72h38V35H31z"/>
-                  <path d="M38 35V25h24v10M38 46h24M38 55h18M38 64h13"/>
-                  <path d="M67 20c6 5 9 11 9 19"/>
-                </svg>
-              </div>
-              <div class="article-date">26 AGO 2024</div>
-              <h3>Derechos y garantías: ¿qué es un amparo?</h3>
-              <a class="article-read" href="#contacto">Leer más →</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <div class="transversal-wrap"><div class="transversal" aria-hidden="true"></div></div>
-
       <!-- CONTACTO -->
       <section class="section contact" id="contacto">
         <div class="container contact-grid">
@@ -1923,10 +1878,6 @@
               <div class="contact-detail">
                 <svg><use href="#icon-pin"></use></svg>
                 <div><strong>Buenos Aires — Vicente López</strong><span>Atención presencial y virtual</span></div>
-              </div>
-              <div class="contact-detail">
-                <svg><use href="#icon-mail"></use></svg>
-                <div><strong>Email</strong><span>Consultar</span></div>
               </div>
             </div>
           </div>
@@ -1972,16 +1923,14 @@
             <a href="#inicio">Inicio</a>
             <a href="#especialidades">Especialidades</a>
             <a href="#como-trabajamos">Cómo trabajamos</a>
-            <a href="#articulos">Artículos</a>
             <a href="#contacto">Contacto</a>
           </nav>
 
           <div class="socials">
-            <!-- REEMPLAZAR # POR LAS URL REALES -->
-            <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/estudio_jvs/" aria-label="Instagram" target="_blank" rel="noopener">
               <svg><use href="#icon-instagram"></use></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <a href="https://ar.linkedin.com/in/jesica-vanesa-santander-31777a19b" aria-label="LinkedIn" target="_blank" rel="noopener">
               <svg><use href="#icon-linkedin"></use></svg>
             </a>
             <a class="js-whatsapp" href="#" aria-label="WhatsApp">
@@ -2066,7 +2015,8 @@
 
     function setWhatsappLinks() {
       document.querySelectorAll(".js-whatsapp").forEach(link => {
-        link.href = whatsappUrl();
+        const customMsg = link.dataset.waMsg;
+        link.href = customMsg ? whatsappUrl(customMsg) : whatsappUrl();
       });
     }
 
@@ -2107,6 +2057,29 @@
     });
 
     document.querySelectorAll(".reveal, .decor-line, .transversal").forEach(el => observer.observe(el));
+
+    // Parallax sutil de la foto del Hero al hacer scroll
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const heroImg = document.querySelector(".hero-media img");
+
+    if (heroImg && !prefersReducedMotion) {
+      let ticking = false;
+
+      function updateParallax() {
+        const offset = Math.min(window.scrollY * 0.08, 40);
+        heroImg.style.transform = `translateY(${offset}px) scale(1.06)`;
+        ticking = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      updateParallax();
+    }
   </script>
 </body>
 </html>
