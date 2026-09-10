@@ -301,6 +301,11 @@
       stroke-width: 1.4;
     }
 
+    use.wa-fill {
+      fill: currentColor !important;
+      stroke: none !important;
+    }
+
     .urgent .button {
       color: var(--white);
       border-color: var(--white);
@@ -368,9 +373,9 @@
     }
 
     .hero h1 {
-      font-size: clamp(58px, 6.2vw, 98px);
-      line-height: .87;
-      max-width: 780px;
+      font-size: clamp(36px, 3.6vw, 58px);
+      line-height: 1.04;
+      max-width: 620px;
       margin-bottom: 28px;
     }
 
@@ -454,7 +459,7 @@
     .hero-note {
       position: absolute;
       right: 28px;
-      top: 120px;
+      top: 270px;
       width: 180px;
       padding: 18px 20px 18px 22px;
       border-left: 1px solid rgba(17,23,28,.55);
@@ -1148,14 +1153,11 @@
     }
 
     .whatsapp-float svg {
-      width: 29px;
-      height: 29px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.6;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex: 0 0 29px;
+      width: 27px;
+      height: 27px;
+      fill: currentColor;
+      stroke: none;
+      flex: 0 0 27px;
     }
 
     /* ---------- Mobile menu ---------- */
@@ -1550,8 +1552,7 @@
         </symbol>
 
         <symbol id="icon-whatsapp" viewBox="0 0 24 24">
-          <path d="M20.5 11.5a8.4 8.4 0 0 1-12.7 7.3L4 20l1.3-3.6A8.4 8.4 0 1 1 20.5 11.5Z"/>
-          <path d="M8.4 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.1.1-.2.3-.1.5.3.7 1.3 1.8 2.1 2.2.2.1.4.1.5-.1l.6-.7c.1-.2.4-.2.6-.1l1.6.8c.2.1.3.3.2.6l-.3.9c-.1.4-.5.6-.9.7-1 .1-2.8-.7-4.2-2.1-1.4-1.4-2.3-3.2-2.2-4.2 0-.4.2-.7.3-.8Z"/>
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.943c0 2.096.548 4.142 1.588 5.945L0 24l6.335-1.652a11.882 11.882 0 0 0 5.706 1.447h.005c6.585 0 11.946-5.36 11.949-11.944a11.87 11.87 0 0 0-3.475-8.402"/>
         </symbol>
 
         <symbol id="icon-person" viewBox="0 0 24 24">
@@ -1628,7 +1629,7 @@
 
         <div class="header-cta">
           <a class="button button-dark js-whatsapp" href="#" aria-label="Solicitar consulta por WhatsApp">
-            <svg class="button-icon"><use href="#icon-whatsapp"></use></svg>
+            <svg class="button-icon"><use href="#icon-whatsapp" class="wa-fill"></use></svg>
             Solicitar consulta
           </a>
         </div>
@@ -1666,14 +1667,14 @@
           <div class="hero-copy">
             <div class="reveal">
               <p class="eyebrow">Tu situación. Nuestra prioridad.</p>
-              <h1>Soluciones jurídicas<br><span class="serif-italic">para tu vida real.</span></h1>
+              <h1>Respuesta legal inmediata<br><span class="serif-italic">y estratégica</span> cuando el tiempo juega en tu contra.</h1>
               <p class="hero-description">
-                Te acompaño con un enfoque claro, humano y estratégico en cada etapa del proceso.
+                Asistencia penal de urgencia las 24 hs, sucesiones y reclamos laborales con la claridad y la rapidez que necesitás.
               </p>
 
               <div class="hero-actions">
                 <a class="button button-dark js-whatsapp" href="#">
-                  <svg class="button-icon"><use href="#icon-whatsapp"></use></svg>
+                  <svg class="button-icon"><use href="#icon-whatsapp" class="wa-fill"></use></svg>
                   Solicitar consulta
                   <svg class="button-icon"><use href="#icon-arrow"></use></svg>
                 </a>
@@ -1782,7 +1783,7 @@
             <small>El estudio está disponible para asesorarte y acompañarte en situaciones urgentes.</small>
           </div>
           <a class="button js-whatsapp" href="#">
-            <svg class="button-icon"><use href="#icon-whatsapp"></use></svg>
+            <svg class="button-icon"><use href="#icon-whatsapp" class="wa-fill"></use></svg>
             Hablar ahora
             <svg class="button-icon"><use href="#icon-arrow"></use></svg>
           </a>
@@ -1871,7 +1872,7 @@
 
             <div class="contact-details">
               <div class="contact-detail">
-                <svg><use href="#icon-whatsapp"></use></svg>
+                <svg><use href="#icon-whatsapp" class="wa-fill"></use></svg>
                 <div><strong id="displayWhatsapp">WhatsApp</strong><span>Consultas y asistencia</span></div>
               </div>
               <div class="contact-detail">
@@ -1893,7 +1894,7 @@
             </div>
 
             <button class="button button-dark" type="submit">
-              <svg class="button-icon"><use href="#icon-whatsapp"></use></svg>
+              <svg class="button-icon"><use href="#icon-whatsapp" class="wa-fill"></use></svg>
               Enviar por WhatsApp
               <svg class="button-icon"><use href="#icon-arrow"></use></svg>
             </button>
@@ -1933,7 +1934,7 @@
               <svg><use href="#icon-linkedin"></use></svg>
             </a>
             <a class="js-whatsapp" href="#" aria-label="WhatsApp">
-              <svg><use href="#icon-whatsapp"></use></svg>
+              <svg><use href="#icon-whatsapp" class="wa-fill"></use></svg>
             </a>
           </div>
         </div>
@@ -1955,7 +1956,7 @@
 
     <!-- WHATSAPP FLOTANTE -->
     <a class="whatsapp-float js-whatsapp" href="#" aria-label="Solicitar consulta por WhatsApp">
-      <svg><use href="#icon-whatsapp"></use></svg>
+      <svg><use href="#icon-whatsapp" class="wa-fill"></use></svg>
       <span>Solicitar consulta</span>
     </a>
 
