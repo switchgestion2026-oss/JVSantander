@@ -353,14 +353,13 @@
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 48% 52%;
-      min-height: 570px;
-      align-items: stretch;
+      position: relative;
     }
 
     .hero-copy {
-      padding: 24px 60px 20px 32px;
+      max-width: 620px;
+      min-height: 500px;
+      padding: 24px 40px 20px 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -419,26 +418,35 @@
     }
 
     .hero-media {
-      position: relative;
-      min-height: 570px;
-      overflow: hidden;
-    }
-
-    .hero-media::before {
-      content: "";
       position: absolute;
-      inset: 0;
+      left: 24%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
       z-index: 1;
-      background: linear-gradient(to right, var(--paper) 0%, rgba(243,241,235,.35) 12%, transparent 30%);
-      pointer-events: none;
     }
 
     .hero-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: 70% center;
       transition: transform 1.2s var(--ease);
+      mask-image: linear-gradient(to right,
+        transparent 0%,
+        rgba(0,0,0,.08) 10%,
+        rgba(0,0,0,.3) 24%,
+        rgba(0,0,0,.65) 38%,
+        rgba(0,0,0,.92) 52%,
+        #000 65%);
+      -webkit-mask-image: linear-gradient(to right,
+        transparent 0%,
+        rgba(0,0,0,.08) 10%,
+        rgba(0,0,0,.3) 24%,
+        rgba(0,0,0,.65) 38%,
+        rgba(0,0,0,.92) 52%,
+        #000 65%);
     }
 
     .hero:hover .hero-media img { transform: scale(1.018); }
@@ -467,25 +475,6 @@
       background: var(--ink);
       margin-top: 18px;
     }
-
-    .hero-cross {
-      position: absolute;
-      left: -17px;
-      top: 94px;
-      width: 30px;
-      height: 30px;
-      opacity: .7;
-    }
-
-    .hero-cross::before,
-    .hero-cross::after {
-      content: "";
-      position: absolute;
-      background: var(--ink);
-    }
-
-    .hero-cross::before { width: 30px; height: 1px; top: 14px; }
-    .hero-cross::after { height: 30px; width: 1px; left: 14px; }
 
     .hero-side-label {
       position: absolute;
@@ -1159,12 +1148,14 @@
     }
 
     .whatsapp-float svg {
-      width: 44px;
-      height: 44px;
+      width: 29px;
+      height: 29px;
       fill: none;
       stroke: currentColor;
-      stroke-width: 1.1;
-      flex: 0 0 44px;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex: 0 0 29px;
     }
 
     /* ---------- Mobile menu ---------- */
@@ -1244,8 +1235,8 @@
 
       .nav { gap: 14px; }
 
-      .hero-grid { grid-template-columns: 50% 50%; }
-      .hero-copy { padding-right: 35px; }
+      .hero-copy { max-width: 540px; padding-right: 30px; }
+      .hero-media { left: 34%; }
 
       .specialty-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1281,12 +1272,10 @@
         padding-top: 115px;
       }
 
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
       .hero-copy {
-        padding: 35px 20px 55px;
+        max-width: 100%;
+        min-height: auto;
+        padding: 35px 20px 0;
       }
 
       .hero h1 {
@@ -1294,7 +1283,19 @@
       }
 
       .hero-media {
-        min-height: 470px;
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        height: 470px;
+        margin-top: 30px;
+      }
+
+      .hero-media img {
+        mask-image: none;
+        -webkit-mask-image: none;
+        object-position: center;
       }
 
       .specialty-grid {
@@ -1376,7 +1377,7 @@
       }
 
       .hero-media {
-        min-height: 390px;
+        height: 390px;
       }
 
       .hero-note {
@@ -1384,11 +1385,6 @@
         top: 50px;
         font-size: 17px;
         width: 130px;
-      }
-
-      .hero-cross {
-        left: 10px;
-        top: 25px;
       }
 
       .trust-row {
@@ -1660,6 +1656,12 @@
         <div class="decor-line line-a" aria-hidden="true"></div>
         <div class="decor-line line-b" aria-hidden="true"></div>
 
+        <div class="hero-media reveal reveal-delay-2">
+          <img src="./hero-estudio-juridico.webp" alt="Espacio de trabajo de un estudio jurídico" fetchpriority="high" width="1000" height="700">
+          <div class="hero-note">Tu caso merece<br>una mirada integral.</div>
+          <div class="hero-side-label">Estrategia · experiencia · resultados</div>
+        </div>
+
         <div class="container hero-grid">
           <div class="hero-copy">
             <div class="reveal">
@@ -1696,13 +1698,6 @@
                 <span>Seguimiento<br>real</span>
               </div>
             </div>
-          </div>
-
-          <div class="hero-media reveal reveal-delay-2">
-            <img src="./hero-estudio-juridico.webp" alt="Espacio de trabajo de un estudio jurídico" fetchpriority="high" width="1000" height="700">
-            <div class="hero-cross" aria-hidden="true"></div>
-            <div class="hero-note">Tu caso merece<br>una mirada integral.</div>
-            <div class="hero-side-label">Estrategia · experiencia · resultados</div>
           </div>
         </div>
       </section>
